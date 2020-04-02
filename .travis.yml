@@ -5,7 +5,7 @@ sudo: false
 env:
   global:
     - CACHIX_CACHE=
-    - NUR_REPO=otevrenamesta/nur-packages
+    - NUR_REPO=mmilata/nur-packages
 
 matrix:
   include:
