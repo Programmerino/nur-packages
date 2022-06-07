@@ -48,19 +48,4 @@ stdenv.mkDerivation {
   passthru.tests = {
     inherit (nixosTests) jitsi-meet;
   };
-
-  meta = with stdenv.lib; {
-    description = "A WebRTC compatible video router";
-    longDescription = ''
-      Jitsi Videobridge is an XMPP server component that allows for multiuser video communication.
-      Unlike the expensive dedicated hardware videobridges, Jitsi Videobridge does not mix the video
-      channels into a composite video stream, but only relays the received video channels to all call
-      participants. Therefore, while it does need to run on a server with good network bandwidth,
-      CPU horsepower is not that critical for performance.
-    '';
-    homepage = "https://github.com/jitsi/jitsi-videobridge";
-    license = licenses.asl20;
-    maintainers = with maintainers; [ mmilata ];
-    platforms = platforms.linux;
-  };
 }
